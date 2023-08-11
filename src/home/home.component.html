@@ -1,0 +1,19 @@
+<div class="   ">
+  <div class="  flex flex-col justify-center items-center">
+    <div class=" md:w-[1000px] lg:w-[1000px]  flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2">
+        <img class="m-1 w-[50px] rounded-3xl border-white-8 border " src="https://i.pinimg.com/564x/e2/64/50/e264503e4088502818ac2d99cebef268.jpg" alt="">
+        <app-nav class="hidden md:block lg:block"></app-nav>
+
+        <div class="m-1 w-[50px] h-[40px] bg-white border  rounded-3xl flex justify-center items-center">
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        </div>
+    </div>
+   <div class=" w-screen max-w-[1000px] m-auto   md:rounded-xl lg:rounded-xl bg-black   relative">
+    <div *ngIf="1>1" class=" absolute z-10 left-0 right-0 backdrop-blur-[1.5px] top-0  bottom-0 flex justify-center items-center">
+      <div class="h-[400px] w-[600px] absolute  bg-blue-500 "></div>
+    </div>
+        <router-outlet></router-outlet>
+        
+   </div>
+  </div>
+</div>
