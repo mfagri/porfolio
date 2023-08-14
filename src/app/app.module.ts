@@ -7,8 +7,10 @@ import { NavComponent } from 'src/home/nav/nav.component';
 import { AboutComponent } from 'src/home/about/about.component';
 import { ProjectsComponent } from 'src/home/projects/projects.component';
 import { UsesComponent } from 'src/home/uses/uses.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,15 +20,9 @@ import {MatIconModule} from '@angular/material/icon';
     AboutComponent,
     ProjectsComponent,
     UsesComponent,
-   
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatMenuModule,
-    MatIconModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, MatMenuModule, MatIconModule,HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
