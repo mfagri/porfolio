@@ -1,7 +1,7 @@
-<div class="bg-white">
-  <div class="flex flex-col justify-center items-center">
+<div class="bg-white ">
+  <div class="flex flex-col justify-center items-center" >
     <div
-      class="md:w-[1000px] lg:w-[1000px] flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2"
+      class="md:w-[1000px]  w-[100%] lg:w-[1000px] flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2"
     >
       <img
         class="m-1 w-[50px] rounded-3xl border-white-8 border"
@@ -15,26 +15,28 @@
       >
         Menu
       </button>
-      <div
-        class="m-1 w-[50px] h-[40px] bg-[#fafafa] border rounded-3xl flex justify-center items-center"
-      >
+      <!-- them -->
+      <button
+        (click)="theme()"
+       class="m-1 w-[50px] h-[40px] bg-red-400 border rounded-3xl flex justify-center items-center">
         <svg
-          stroke="currentColor"
-          fill="none"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          height="25"
-          width="25"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          ></path>
-        </svg>
-      </div>
+        stroke="currentColor"
+        fill="none"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        height="25"
+        width="25"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        ></path>
+      </svg>
+      </button>
+      <!-- them -->
     </div>
     <div
       class="w-screen max-w-[1000px] m-auto md:rounded-xl lg:rounded-xl bg-white relative"
@@ -44,7 +46,7 @@
         class="md:hidden lg:hidden absolute z-10 left-0 right-0 backdrop-blur-[1.5px] top-0 bottom-0 flex justify-center"
       >
         <div
-          class="w-[100%] absolute bg-white flex flex-col justify-start rounded-b-xl p-6"
+          class="w-[100%] absolute bg-white flex flex-col justify-start gap-5 rounded-b-xl p-6"
         >
           <div class="h-[40px] w-[100%] flex justify-between">
             <p>Navigation</p>
@@ -61,7 +63,6 @@
             class="text-zinc-800 hover:text-teal-500"
             >About</a
           >
-          <div class="h-[0.1px] w-[100%] bg-black"></div>
           <a
             (click)="menu()"
             routerLink="/projects"
@@ -69,7 +70,6 @@
           >
             Projects</a
           >
-          <div class="h-[0.1px] w-[100%] bg-black"></div>
           <a
             (click)="menu()"
             routerLink="/uses"

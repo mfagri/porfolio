@@ -21,12 +21,12 @@ export class ProjectsComponent implements OnInit {
   projects: projectinfo[] = [];
   icons: string [] = [
     'src/assets/C.png',
-    'src/assets/C++.svg',
-    'src/assets/Dart.svg',
+    'src/assets/C++.png',
+    'src/assets/Dart.png',
     'src/assets/HTML.png',
     'src/assets/JavaScript.png',
     'src/assets/SCSS.png',
-    'src/assets/TypeScript.svg',
+    'src/assets/TypeScript.png',
   ]
   
   async ngOnInit() {
@@ -36,13 +36,16 @@ export class ProjectsComponent implements OnInit {
          console.log(res);
         //  console.log("f",this.data);
          this.data.forEach((d: any) => {
+          var j = d.language;
+          if(j === 'CSS')
+            j = 'SCSS';
            this.projects.push({
              name: d.name,
              visibility: d.visibility,
              git_url: d.html_url,
              days: this.make_time(d.created_at),
              description:d.description,
-             language: d.language
+             language: j
            });
          });
       }

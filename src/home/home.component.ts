@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+theme() {
+
+  console.log('hello you');
+}
   v:boolean = false
   menu(){
     if(this.v === false)
