@@ -2,11 +2,11 @@
   <div class="p-4 justify-center flex flex-col items-start">
     <div class="m-4 p-4 flex flex-col justify-start items-start">
       <h1
-        class="text-4xl md:text-4xl lg:text-4xl font-bold text-[30px] p-4 text-black self-center"
+        class="text-4xl md:text-4xl lg:text-4xl font-bold text-[30px] p-4 text-[var(--color-text)] self-center"
       >
         Things I`ve made trying to put my dent in the universe.
       </h1>
-      <p class="text-zinc-700 m-2 text-[14px]">
+      <p class="text-[var(--color-text)] m-2 text-[14px]">
         I`ve worked on tons of little projects over the years but these are the
         ones that I'm most proud of. Many of them are open-source, so if you see
         something that piques your interest, check out the code and contribute
@@ -18,19 +18,19 @@
   <div class="flex justify-center items-center flex-wrap gap-[50px]">
     <div
       *ngFor="let item of projects"
-      class="h-[300px] w-[300px] flex flex-col gap-[10px] p-10 justify-start items-start rounded-xl  bg-black/10 hover:bg-black/40"
+      class="h-[300px] w-[300px] flex flex-col gap-[10px] p-10 justify-start items-start rounded-xl  bg-[var(--color-bg2)] hover:bg-black/40"
     >
       
        <div class="flex justify-center items-center gap-5">
          <img class="h-10 rounded-md" src="../../assets/{{item.language}}.png" alt="">
           <p class="text-sm text-zinc-500">{{item.language}}</p>
        </div>
-      <h1 class="text-xl font-bold">{{item.name}}</h1>
+      <h1 class="text-xl font-bold text-[var(--color-text)]">{{item.name}}</h1>
       <div class="flex justify-center items-center">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="mr-1 h-3 fill-zinc-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path></svg>
         <p class="text-zinc-600 text-sm">{{item.days}} day</p>
       </div>
-      <p>{{item.description}}</p>
+      <p class="text-[var(--color-text)]">{{item.description}}</p>
       <a
       class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500"
       href={{item.git_url}}
@@ -38,7 +38,7 @@
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
-        class="h-6 w-6 flex-none fill-black transition group-hover:fill-teal-500"
+        class="h-6 w-6 flex-none fill-[var(--color-text)] transition group-hover:fill-teal-500"
       >
         <path
           fill-rule="evenodd"

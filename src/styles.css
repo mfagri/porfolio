@@ -6,9 +6,13 @@
 :root{
     --color-bg:white;
     --color-text:black;
+    --color-bg2:gray;
+    --v:10
 }
 
 [data-theme="dark"]{
     --color-bg:black;
     --color-text:white;
+    --color-bg2:gray;
+    --v:20
 }
