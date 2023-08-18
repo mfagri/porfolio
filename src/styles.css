@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+    --color-bg:white;
+    --color-text:black;
+}
+
+[data-theme="dark"]{
+    --color-bg:black;
+    --color-text:white;
+}

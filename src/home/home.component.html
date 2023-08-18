@@ -1,4 +1,4 @@
-<div class="bg-white ">
+<div class="bg-[var(--color-bg)] ">
   <div class="flex flex-col justify-center items-center" >
     <div
       class="md:w-[1000px]  w-[100%] lg:w-[1000px] flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2"
@@ -11,14 +11,14 @@
       <app-nav class="hidden md:block lg:block"></app-nav>
       <button
         (click)="menu()"
-        class="h-[40px] md:hidden lg:hidden w-[100px] bg-black rounded-xl text-white hover:text-teal-500"
+        class="h-[40px] md:hidden lg:hidden w-[100px] bg-[var(--color-bg)] rounded-xl text-[var(--color-text)] hover:text-teal-500"
       >
         Menu
       </button>
       <!-- them -->
       <button
         (click)="theme()"
-       class="m-1 w-[50px] h-[40px] bg-red-400 border rounded-3xl flex justify-center items-center">
+       class="m-1 w-[50px] h-[40px] bg-[var(--color-bg)] fill-[var(--color-text)] border rounded-3xl flex justify-center items-center">
         <svg
         stroke="currentColor"
         fill="none"
@@ -39,20 +39,20 @@
       <!-- them -->
     </div>
     <div
-      class="w-screen max-w-[1000px] m-auto md:rounded-xl lg:rounded-xl bg-white relative"
+      class="w-screen max-w-[1000px] m-auto md:rounded-xl lg:rounded-xl bg-[var(--color-bg)] relative"
     >
       <div
         *ngIf="v"
         class="md:hidden lg:hidden absolute z-10 left-0 right-0 backdrop-blur-[1.5px] top-0 bottom-0 flex justify-center"
       >
         <div
-          class="w-[100%] absolute bg-white flex flex-col justify-start gap-5 rounded-b-xl p-6"
+          class="w-[100%] absolute bg-[var(--color-bg)] flex flex-col justify-start gap-5 rounded-b-xl p-6"
         >
           <div class="h-[40px] w-[100%] flex justify-between">
-            <p>Navigation</p>
+            <p class="text-[var(--color-text)]">Navigation</p>
             <button
               (click)="menu()"
-              class="h-[20px] w-[20px] bg-black rounded-xl text-white flex justify-center items-center"
+              class="h-[20px] w-[20px] bg-[var(--color-bg)] rounded-xl text-[var(--color-text)] flex justify-center items-center"
             >
               X
             </button>

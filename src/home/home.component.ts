@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  darkmode = false;
 theme() {
-
+  this.darkmode = !this.darkmode;
+  document.documentElement.setAttribute('data-theme',this.darkmode?"dark":"light")
   console.log('hello you');
+
 }
   v:boolean = false
   menu(){
