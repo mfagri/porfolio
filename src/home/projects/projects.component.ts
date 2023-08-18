@@ -7,7 +7,7 @@ export interface projectinfo{
   visibility:string,
   git_url: string,
   days:string,
-  // created_at: string,
+  language: string,
   description:string
 };
 @Component({
@@ -19,20 +19,30 @@ export class ProjectsComponent implements OnInit {
   constructor(private http: HttpClient) {}
   data:any = [];
   projects: projectinfo[] = [];
+  icons: string [] = [
+    'src/assets/C.png',
+    'src/assets/C++.svg',
+    'src/assets/Dart.svg',
+    'src/assets/HTML.png',
+    'src/assets/JavaScript.png',
+    'src/assets/SCSS.png',
+    'src/assets/TypeScript.svg',
+  ]
   
   async ngOnInit() {
     console.log(await this.getdata().subscribe({
       next:(res)=>{
         this.data =   res
-        //  console.log(res);
+         console.log(res);
         //  console.log("f",this.data);
          this.data.forEach((d: any) => {
            this.projects.push({
              name: d.name,
              visibility: d.visibility,
-             git_url: d.git_url,
+             git_url: d.html_url,
              days: this.make_time(d.created_at),
-             description:d.description
+             description:d.description,
+             language: d.language
            });
          });
       }
