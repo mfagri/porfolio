@@ -6,13 +6,15 @@
 :root{
     --color-bg:white;
     --color-text:black;
-    --color-bg2:gray;
-    --v:10
+    --color-bg2:rgba(0, 0, 0, 0.492);
+    --v:10;
+    --color-home:white;
 }
 
 [data-theme="dark"]{
     --color-bg:black;
     --color-text:white;
-    --color-bg2:gray;
-    --v:20
+    --color-bg2:rgba(255, 255, 255, 0.466);
+    --v:20;
+    --color-home:black;
 }

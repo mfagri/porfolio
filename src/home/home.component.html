@@ -1,7 +1,7 @@
-<div class="bg-[var(--color-bg)] ">
-  <div class="flex flex-col justify-center items-center" >
+<div class="bg-zinc-700">
+  <div class="flex flex-col justify-center items-center bg-[var(--color-bg)]">
     <div
-      class="md:w-[1000px]  w-[100%] lg:w-[1000px] flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2"
+      class="md:w-[1000px] w-[100%] lg:w-[1000px] flex justify-evenly p-2 items-center md:rounded-xl lg:rounded-xl m-2"
     >
       <img
         class="m-1 w-[50px] rounded-3xl border-white-8 border"
@@ -18,23 +18,32 @@
       <!-- them -->
       <button
         (click)="theme()"
-       class="m-1 w-[50px] h-[40px] bg-[var(--color-bg)] fill-[var(--color-text)] border rounded-3xl flex justify-center items-center">
-        <svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        height="25"
-        width="25"
-        xmlns="http://www.w3.org/2000/svg"
+        class="m-1 w-[50px] h-[40px] bg-[var(--color-bg)] fill-[var(--color-text)] border rounded-3xl flex justify-center items-center"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-        ></path>
-      </svg>
+        <svg
+          *ngIf="darkmode"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgb(255, 255, 255); transform: ; msfilter: "
+        >
+          <path
+            d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"
+          ></path>
+        </svg>
+        <svg
+          *ngIf="!darkmode"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgb(4, 0, 0); transform: ; msfilter: "
+        >
+          <path
+            d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+          ></path>
+        </svg>
       </button>
       <!-- them -->
     </div>
@@ -60,20 +69,20 @@
           <a
             (click)="menu()"
             routerLink="/"
-            class="text-zinc-800 hover:text-teal-500"
+            class="text-[var(--color-text)] hover:text-teal-500"
             >About</a
           >
           <a
             (click)="menu()"
             routerLink="/projects"
-            class="text-zinc-800 hover:text-teal-500"
+            class="text-[var(--color-text)] hover:text-teal-500"
           >
             Projects</a
           >
           <a
             (click)="menu()"
             routerLink="/uses"
-            class="text-zinc-800 hover:text-teal-500"
+            class="text-[var(--color-text)] hover:text-teal-500"
           >
             Uses</a
           >

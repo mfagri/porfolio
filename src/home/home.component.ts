@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   darkmode = false;
+// isSubscribedToEmailsMessage: string|null;
 theme() {
   this.darkmode = !this.darkmode;
   document.documentElement.setAttribute('data-theme',this.darkmode?"dark":"light")
@@ -15,9 +18,6 @@ theme() {
 }
   v:boolean = false
   menu(){
-    if(this.v === false)
-      this.v = true
-    else
-      this.v = false
+    this.v = !this.v
   }
 }
