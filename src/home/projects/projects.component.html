@@ -16,12 +16,12 @@
     <div></div>
   </div>
   <div class="flex justify-center items-center flex-wrap gap-[50px]">
-    <div
+    <div  @fide
       *ngFor="let item of projects"
       class="h-[300px] w-[300px] flex flex-col gap-[10px] p-10 justify-start items-start rounded-xl  bg-[var(--color-bg2)] hover:bg-black/40"
     >
       
-       <div class="flex justify-center items-center gap-5">
+       <div @fide1 class="flex justify-center items-center gap-5">
          <img class="h-10 rounded-md" src="../../assets/{{item.language}}.png" alt="">
           <p class="text-sm text-[var(--color-text)]">{{item.language}}</p>
        </div>

@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     ProjectsComponent,
     UsesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MatMenuModule, MatIconModule,HttpClientModule,MatSlideToggleModule],
+  imports: [BrowserModule, AppRoutingModule, MatMenuModule, MatIconModule,HttpClientModule,MatSlideToggleModule,BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

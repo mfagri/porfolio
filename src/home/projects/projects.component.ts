@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -14,6 +15,40 @@ export interface projectinfo{
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
+  animations: [
+    trigger('fide', [
+      // state(),
+      transition('void => *', [
+        style({
+          color: 'white',
+          opacity: 0,
+
+          transform: 'translateY(100%)' 
+        }),
+        animate(1000),
+      ]),
+      transition('* => void',[
+        animate(1000),
+        style({opacity:0})
+      ])
+    ]),
+    trigger('fide1', [
+      // state(),
+      transition('void => *', [
+        style({
+          color: 'white',
+          opacity: 0,
+
+          transform: 'translateY(-100%)' 
+        }),
+        animate(3000),
+      ]),
+      transition('* => void',[
+        animate(3000),
+        style({opacity:0})
+      ])
+    ]),
+  ],
 })
 export class ProjectsComponent implements OnInit {
   constructor(private http: HttpClient) {}
